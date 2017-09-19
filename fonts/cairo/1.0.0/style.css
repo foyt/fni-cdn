@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'cairo-extralight';
+  src:  url('./Cairo-ExtraLight.woff2') format('woff2'),
+        url('./Cairo-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cairo-light';
+  src:  url('./Cairo-Light.woff2') format('woff2'),
+        url('./Cairo-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cairo-regular';
+  src:  url('./Cairo-Regular.woff2') format('woff2'),
+        url('./Cairo-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cairo-semibold';
+  src:  url('./Cairo-SemiBold.woff2') format('woff2'),
+        url('./Cairo-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cairo-bold';
+  src:  url('./Cairo-Bold.woff2') format('woff2'),
+        url('./Cairo-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cairo-black';
+  src:  url('./Cairo-Black.woff2') format('woff2'),
+        url('./Cairo-Black.woff') format('woff');
+}
