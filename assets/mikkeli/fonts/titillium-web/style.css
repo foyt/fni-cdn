@@ -1,0 +1,27 @@
+/* titillium-web-regular - latin */
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: url('titillium-web-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
+       url('titillium-web-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('titillium-web-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('titillium-web-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('titillium-web-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('titillium-web-v6-latin-regular.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+
+/* titillium-web-700 - latin */
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 700;
+  src: url('titillium-web-v6-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
+       url('titillium-web-v6-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('titillium-web-v6-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('titillium-web-v6-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('titillium-web-v6-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('titillium-web-v6-latin-700.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
