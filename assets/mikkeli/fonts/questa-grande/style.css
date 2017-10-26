@@ -1,0 +1,38 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3473165, 2017-10-26T06:12:41-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: QuestaGrande-BoldItalic by The Questa Project
+ * URL: https://www.myfonts.com/fonts/questa/questa-grande/bold-italic-175449/
+ * Copyright: &#x00A9;2015, Jos Buivenga &amp; Martin Majoor
+ * Licensed pageviews: 100,000
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3473165
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/34ff0d");
+
+/* QuestaGrande-BoldItalic */
+@font-face {
+  font-family: 'QuestaGrande-BoldItalic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('34FF0D_0_0.eot'); /* IE9 Compat Modes */
+  src: local('QuestaGrande-BoldItalic'),
+       url('34FF0D_0_0.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('34FF0D_0_0.woff2') format('woff2'), /* Super Modern Browsers */
+       url('34FF0D_0_0.woff') format('woff'), /* Modern Browsers */
+       url('34FF0D_0_0.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
