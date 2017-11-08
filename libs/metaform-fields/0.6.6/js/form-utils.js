@@ -1,0 +1,2 @@
+(function($){"use strict";window.MetaformUtils={createDatePicker:function(input){$(input).flatpickr({"locale":"fi","altFormat":"d.m.Y","altInput":true,"utc":true,"allowInput":true})},createTimePicker:function(input){$(input).flatpickr({"locale":"fi","allowInput":true,"noCalendar":true,"enableTime":true,"time_24hr":true})},createDateTimePicker:function(input){$(input).flatpickr({"locale":"fi","altFormat":"d.m.Y H:i","altInput":true,"utc":true,"allowInput":true,"enableTime":true,"time_24hr":true})}}})(jQuery);
+//# sourceMappingURL=form-utils.js.map
