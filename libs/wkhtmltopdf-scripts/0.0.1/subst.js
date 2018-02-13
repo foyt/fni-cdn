@@ -1,4 +1,4 @@
-body.onload = function () {
+window.onload = function () {
   var vars = {};
   var query_strings_from_url = document.location.search.substring(1).split('&');
   for (var query_string in query_strings_from_url) {
@@ -16,4 +16,4 @@ body.onload = function () {
           }
       }
   }
-}
+};
