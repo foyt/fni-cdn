@@ -1,12 +1,3 @@
-/**
- * Finnish translation
- *  @name Finnish
- *  @anchor Finnish
- *  @author Seppo Äyräväinen
- *  @author Viktors Cvetkovs
- *  @author <a href="https://ironlions.fi">Niko Granö</a>
- */
-
 {
 	"sEmptyTable":   "Ei näytettäviä tuloksia.",
 	"sInfo":         "Näytetään rivit _START_ - _END_ (yhteensä _TOTAL_ )",
