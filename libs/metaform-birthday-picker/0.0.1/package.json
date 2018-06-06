@@ -1,0 +1,29 @@
+{
+  "name": "metaform-birthday-picker",
+  "version": "0.0.1",
+  "description": "jQueryUI birthday picker module",
+  "main": "src/metaform-birthday-picker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Metatavu/metaform-birthday-picker.git"
+  },
+  "keywords": [
+    "Birthday",
+    "picker",
+    "datepicker"
+  ],
+  "author": "Metatavu Oy",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Metatavu/metaform-birthday-picker/issues"
+  },
+  "homepage": "https://github.com/Metatavu/metaform-birthday-picker#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-uglify": "^3.3.0",
+    "load-grunt-tasks": "^4.0.0"
+  }
+}
