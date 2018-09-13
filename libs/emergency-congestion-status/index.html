@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        padding-right: 10px;
+      }
+      .chart-container {
+        width: 97vw;
+        height: 100vh;
+      }
+      #myChart {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+  </head>
+
+  <body>
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+    
+   <script>
+    var ctx = document.getElementById("myChart");
+    var chart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: [],
+            datasets: [{
+                label: '# of Votes',
+                data: [50, 50],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                ]
+            }]
+        },
+        options: {
+            rotation: 1 * Math.PI,
+            maintainAspectRatio: false,
+            circumference: 1 * Math.PI
+        }
+    });
+
+    var xhr = new XMLHttpRequest();
+
+    setInterval(function() {
+      xhr.open('GET', 'https://essote-soteapi.metatavu.io/v1/emergencyCongestionStatuses?firstResult=0&maxResults=1');
+      xhr.send(null);
+    }, 5000);
+
+    xhr.onreadystatechange = function () {
+      var DONE = 4; 
+      var OK = 200;
+      if (xhr.readyState == DONE) {
+        var status = JSON.parse(xhr.responseText);
+        var value = parseInt(status[0].value);
+        chart.data.datasets[0].data[0] = value;
+        chart.data.datasets[0].data[1] = 100 - value;
+        chart.data.datasets[0].backgroundColor = getColor(value);
+        chart.update();
+      }
+    };
+
+    function getColor (value) {
+      var color = '';
+      if (value > 0 && value <= 32) {
+        color = 'green';
+      }
+      else if (value >= 33 && value <= 65) {
+        color = 'yellow';
+      }
+      else if (value >= 66) {
+        color = 'red';
+      }
+      return [color];
+    }
+   </script> 
+  </body>
+</html>
