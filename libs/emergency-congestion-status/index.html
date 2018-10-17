@@ -2,20 +2,64 @@
 <html>
   <head>
     <style>
+      @font-face {
+        font-family: 'icomoon';
+        src:  url('fonts/icomoon.eot?k9zork');
+        src:  url('fonts/icomoon.eot?k9zork#iefix') format('embedded-opentype'),
+          url('fonts/icomoon.ttf?k9zork') format('truetype'),
+          url('fonts/icomoon.woff?k9zork') format('woff'),
+          url('fonts/icomoon.svg?k9zork#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      [class^="icon-"], [class*=" icon-"] {
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .icon-chair_full:before {
+        content: "\e900";
+      }
+      .icon-chair_empty:before {
+        content: "\e901";
+      }
+      .chair-container {
+        width: 100%;
+      }
+      .chair {
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+      }
+      .chair-row {
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+      }
       .body {
         margin: 0;
         padding: 0;
-        width: 100vw;
-        height: 100vh;
         padding-right: 10px;
       }
       .chart-container {
-        width: 97vw;
-        height: 100vh;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 35px;
       }
       #myChart {
-        width: 100%;
-        height: 100%;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #status-text {
+        text-align: center;
       }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
@@ -25,67 +69,234 @@
     <div class="chart-container">
         <canvas id="myChart"></canvas>
     </div>
-    
-   <script>
-    var ctx = document.getElementById("myChart");
-    var chart = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: ["ruuhka", "ruuhka"],
-            datasets: [{
-                label: '# of Votes',
-                data: [50, 50],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 1)',
-                ]
-            }]
-        },
-        options: {
-          legend: {
-              display: false
-            },
-            tooltips: {
-              enabled: false
-            },
-            rotation: 1 * Math.PI,
-            maintainAspectRatio: false,
-            circumference: 1 * Math.PI
-        }
-    });
+    <div class="chair-container">
+      <div class="chair-row">
+        <span class="chair"></span>
+        <span class="chair"></span>
+        <span class="chair"></span>
+        <span class="chair"></span>
+        <span class="chair"></span>
+        <span class="chair"></span>
+        <span class="chair"></span>
+      </div>
+      <div class="chair-row">
+        <span class="chair"></span>
+        <span class="chair"></span>
+        <span class="chair"></span>
+        <span class="chair"></span>
+        <span class="chair"></span>
+        <span class="chair"></span>
+        <span class="chair"></span>
+      </div>
+    </div>
+    <div class="status-text-container">
+      <h3 id="status-text"></h3>
+    </div>
 
-    var xhr = new XMLHttpRequest();
+  <script>
+    var hideChart = getUrlParameter("hideChart") === "true";
+    var hideChairs = getUrlParameter("hideChairs") === "true";
+    var hideStatus = getUrlParameter("hideStatus") === "true";
+    var chart;
+    
+    if (hideChart) {
+      document.querySelector(".chart-container").remove();
+    }
+
+    if (hideChairs) {
+      document.querySelector(".chair-container").remove();
+    }
+
+    if (hideStatus) {
+      document.querySelector(".status-text-container").remove();
+    }
+
+    var ctx = document.getElementById("myChart");
+    if (!hideChart) {
+      chart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+              labels: ["ruuhka", "ruuhka"],
+              datasets: [{
+                  label: '# of Votes',
+                  data: [50, 50],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 1)',
+                  ]
+              }]
+          },
+          options: {
+            legend: {
+                display: false
+              },
+              tooltips: {
+                enabled: false
+              },
+              rotation: 1 * Math.PI,
+              maintainAspectRatio: true,
+              circumference: 1 * Math.PI
+          }
+      });
+    }
+
+    updateValues(true);
 
     setInterval(function() {
-      xhr.open('GET', 'https://essote-soteapi.metatavu.io/v1/emergencyCongestionStatuses?firstResult=0&maxResults=1');
-      xhr.send(null);
+      updateValues(false);
     }, 5000);
 
-    xhr.onreadystatechange = function () {
-      var DONE = 4; 
-      var OK = 200;
-      if (xhr.readyState == DONE) {
-        var status = JSON.parse(xhr.responseText);
-        var value = parseInt(status[0].value);
-        chart.data.datasets[0].data[0] = value;
-        chart.data.datasets[0].data[1] = 100 - value;
-        chart.data.datasets[0].backgroundColor = getColor(value);
-        chart.update();
+    function updateValues(initialUpdate) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        var DONE = 4; 
+        var OK = 200;
+        if (xhr.readyState == DONE) {
+          var status = JSON.parse(xhr.responseText);
+          var value = parseInt(status[0].value);
+          updateChart(value);
+          updateChairs(value);
+          updateStatusText(value);
+          if (initialUpdate && !hideChairs) {
+            fitText(document.querySelectorAll(".chair-row"));
+          }
+        }
+      };
+      xhr.open('GET', 'https://essote-soteapi.metatavu.io/v1/emergencyCongestionStatuses?firstResult=0&maxResults=1');
+      xhr.send(null);
+    }
+
+    function updateChart(value) {
+      if (hideChart) {
+        return;
       }
+
+      chart.data.datasets[0].data[0] = value;
+      chart.data.datasets[0].data[1] = 100 - value;
+      chart.data.datasets[0].backgroundColor = getColor(value);
+      chart.update();
+    }
+
+    function updateChairs(value) {
+      if (hideChairs) {
+        return;
+      }
+
+      var color = getColor(value)[0];
+      var chairs = document.querySelectorAll(".chair");
+      var divider = 100 / chairs.length;
+      var occupied = Math.floor(value / divider);
+      for(var i = 0; i < chairs.length; i++) {
+        chairs[i].style.color = color;
+
+        if (i <= occupied) {
+          removeClass(chairs[i], "icon-chair_empty");
+          addClass(chairs[i], "icon-chair_full");
+        } else {
+          removeClass(chairs[i], "icon-chair_full");
+          addClass(chairs[i], "icon-chair_empty");
+        }
+      }
+    }
+
+    function updateStatusText(value) {
+      if (hideStatus) {
+        return;
+      }
+
+      const statusTextElement = document.getElementById("status-text");
+      if (value <= 32) {
+        statusTextElement.innerHTML = "Odotusaika ei ole pitkä."
+      } else if (value >= 33 && value <= 65) {
+        statusTextElement.innerHTML = "Odotusajat ovat hieman pidentyneet."
+      } else if (value >= 66) {
+        statusTextElement.innerHTML = "Odotusaika on pidentynyt."
+      }
+    }
+
+    function getUrlParameter(nameParam) {
+      var name = nameParam.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     };
 
-    function getColor (value) {
+    function removeClass(element, classToRemove) {
+      var classes = element.className.split(" ");
+      var index = classes.indexOf(classToRemove);
+      if (index > -1) {
+        classes.splice(index, 1);
+      }
+      element.className = classes.join(" ");
+    }
+
+    function addClass(element, classToAdd) {
+      var classes = element.className.split(" ");
+      var index = classes.indexOf(classToAdd);
+      if (index < 0) {
+        classes.push(classToAdd);
+      }
+      element.className = classes.join(" ");
+    }
+
+    function getColor(value) {
       var color = '';
-      if (value > 0 && value <= 32) {
+      if (value <= 32) {
         color = 'green';
       }
       else if (value >= 33 && value <= 65) {
-        color = 'yellow';
+        color = '#d8cf1a';
       }
       else if (value >= 66) {
         color = 'red';
       }
       return [color];
     }
-   </script> 
+
+    function fitText(el, kompressor, options) {
+
+      var settings = extend({
+        'minFontSize' : -1/0,
+        'maxFontSize' : 1/0
+      }, options);
+
+      var fit = function (el) {
+        var compressor = kompressor || 1;
+        var resizer = function () {
+          el.style.fontSize = Math.max(Math.min(el.clientWidth / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)) + 'px';
+        };
+        resizer();
+        addEvent(window, 'resize', resizer);
+        addEvent(window, 'orientationchange', resizer);
+      };
+
+      if (el.length) {
+        for(var i=0; i<el.length; i++) {
+          fit(el[i]);
+        }
+      } else {
+        fit(el);
+      }
+
+      return el;
+    };
+
+    function addEvent(el, type, fn) {
+      if (el.addEventListener) {
+        el.addEventListener(type, fn, false);
+      } else {
+        el.attachEvent('on'+type, fn);
+      }
+    };
+      
+    function extend(obj, ext) {
+      for(var key in ext) {
+        if(ext.hasOwnProperty(key)) {
+          obj[key] = ext[key];
+        }
+      }
+      return obj;
+    };
+
+  </script> 
   </body>
 </html>
