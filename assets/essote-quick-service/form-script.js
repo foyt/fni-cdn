@@ -12,5 +12,5 @@ $(document).on('metaformReady', function() {
   });
 
   var preferredContactDatePicker = document.querySelector("#field-prefered-contact-date")._flatpickr;
-  preferredContactDatePicker.set("disable", [new Date(2019, 1, 1), new Date(2019,1,6), new Date(2019,4,19), new Date(2019,4,21), new Date(2019,4,22), new Date(2019,4,30), new Date(2019,5,1), new Date(2019,5,30), new Date(2019,6,9), new Date(2019,6,21), new Date(2019,6,22), new Date(2019,11,2), new Date(2019,12,6), new Date(2019,12,24), new Date(2019,12,25), new Date(2019,12,26), new Date(2019,12,31) ]);
+  preferredContactDatePicker.set("disable", [new Date(2019, 0, 1), new Date(2019,0,6), new Date(2019,3,19), new Date(2019,3,21), new Date(2019,3,22), new Date(2019,3,30), new Date(2019,4,1), new Date(2019,4,30), new Date(2019,5,9), new Date(2019,5,21), new Date(2019,5,22), new Date(2019,10,2), new Date(2019,11,6), new Date(2019,11,24), new Date(2019,11,25), new Date(2019,11,26), new Date(2019,11,31) ]);
 });
