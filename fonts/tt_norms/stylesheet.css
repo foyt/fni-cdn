@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'tt_norms_probold';
+    src: url('./typetype_-_tt_norms_pro_bold-webfont.woff2') format('woff2'),
+         url('./typetype_-_tt_norms_pro_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tt_norms_promedium';
+    src: url('./typetype_-_tt_norms_pro_medium-webfont.woff2') format('woff2'),
+         url('./typetype_-_tt_norms_pro_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tt_norms_proregular';
+    src: url('./typetype_-_tt_norms_pro_regular-webfont.woff2') format('woff2'),
+         url('./typetype_-_tt_norms_pro_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
