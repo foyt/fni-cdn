@@ -1,53 +1,53 @@
-  @font-face {font-family: 'TTNorms-BlackItalic';src: url('webfonts/3679F1_0_0.eot');src: url('webfonts/3679F1_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_0_0.woff2') format('woff2'),url('webfonts/3679F1_0_0.woff') format('woff'),url('webfonts/3679F1_0_0.ttf') format('truetype');}
+  @font-face {font-family: 'TTNorms-BlackItalic';src: url('./webfonts/3679F1_0_0.eot');src: url('./webfonts/3679F1_0_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_0_0.woff2') format('woff2'),url('./webfonts/3679F1_0_0.woff') format('woff'),url('./webfonts/3679F1_0_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-ExtraBoldItalic';src: url('webfonts/3679F1_1_0.eot');src: url('webfonts/3679F1_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_1_0.woff2') format('woff2'),url('webfonts/3679F1_1_0.woff') format('woff'),url('webfonts/3679F1_1_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-ExtraBoldItalic';src: url('./webfonts/3679F1_1_0.eot');src: url('./webfonts/3679F1_1_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_1_0.woff2') format('woff2'),url('./webfonts/3679F1_1_0.woff') format('woff'),url('./webfonts/3679F1_1_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-Black';src: url('webfonts/3679F1_2_0.eot');src: url('webfonts/3679F1_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_2_0.woff2') format('woff2'),url('webfonts/3679F1_2_0.woff') format('woff'),url('webfonts/3679F1_2_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-Black';src: url('./webfonts/3679F1_2_0.eot');src: url('./webfonts/3679F1_2_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_2_0.woff2') format('woff2'),url('./webfonts/3679F1_2_0.woff') format('woff'),url('./webfonts/3679F1_2_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-BoldItalic';src: url('webfonts/3679F1_3_0.eot');src: url('webfonts/3679F1_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_3_0.woff2') format('woff2'),url('webfonts/3679F1_3_0.woff') format('woff'),url('webfonts/3679F1_3_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-BoldItalic';src: url('./webfonts/3679F1_3_0.eot');src: url('./webfonts/3679F1_3_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_3_0.woff2') format('woff2'),url('./webfonts/3679F1_3_0.woff') format('woff'),url('./webfonts/3679F1_3_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-Bold';src: url('webfonts/3679F1_4_0.eot');src: url('webfonts/3679F1_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_4_0.woff2') format('woff2'),url('webfonts/3679F1_4_0.woff') format('woff'),url('webfonts/3679F1_4_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-Bold';src: url('./webfonts/3679F1_4_0.eot');src: url('./webfonts/3679F1_4_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_4_0.woff2') format('woff2'),url('./webfonts/3679F1_4_0.woff') format('woff'),url('./webfonts/3679F1_4_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-ExtraBold';src: url('webfonts/3679F1_5_0.eot');src: url('webfonts/3679F1_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_5_0.woff2') format('woff2'),url('webfonts/3679F1_5_0.woff') format('woff'),url('webfonts/3679F1_5_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-ExtraBold';src: url('./webfonts/3679F1_5_0.eot');src: url('./webfonts/3679F1_5_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_5_0.woff2') format('woff2'),url('./webfonts/3679F1_5_0.woff') format('woff'),url('./webfonts/3679F1_5_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-ExtraLightItalic';src: url('webfonts/3679F1_6_0.eot');src: url('webfonts/3679F1_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_6_0.woff2') format('woff2'),url('webfonts/3679F1_6_0.woff') format('woff'),url('webfonts/3679F1_6_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-ExtraLightItalic';src: url('./webfonts/3679F1_6_0.eot');src: url('./webfonts/3679F1_6_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_6_0.woff2') format('woff2'),url('./webfonts/3679F1_6_0.woff') format('woff'),url('./webfonts/3679F1_6_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-ExtraLight';src: url('webfonts/3679F1_7_0.eot');src: url('webfonts/3679F1_7_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_7_0.woff2') format('woff2'),url('webfonts/3679F1_7_0.woff') format('woff'),url('webfonts/3679F1_7_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-ExtraLight';src: url('./webfonts/3679F1_7_0.eot');src: url('./webfonts/3679F1_7_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_7_0.woff2') format('woff2'),url('./webfonts/3679F1_7_0.woff') format('woff'),url('./webfonts/3679F1_7_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-HeavyItalic';src: url('webfonts/3679F1_8_0.eot');src: url('webfonts/3679F1_8_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_8_0.woff2') format('woff2'),url('webfonts/3679F1_8_0.woff') format('woff'),url('webfonts/3679F1_8_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-HeavyItalic';src: url('./webfonts/3679F1_8_0.eot');src: url('./webfonts/3679F1_8_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_8_0.woff2') format('woff2'),url('./webfonts/3679F1_8_0.woff') format('woff'),url('./webfonts/3679F1_8_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-Heavy';src: url('webfonts/3679F1_9_0.eot');src: url('webfonts/3679F1_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_9_0.woff2') format('woff2'),url('webfonts/3679F1_9_0.woff') format('woff'),url('webfonts/3679F1_9_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-Heavy';src: url('./webfonts/3679F1_9_0.eot');src: url('./webfonts/3679F1_9_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_9_0.woff2') format('woff2'),url('./webfonts/3679F1_9_0.woff') format('woff'),url('./webfonts/3679F1_9_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-Italic';src: url('webfonts/3679F1_A_0.eot');src: url('webfonts/3679F1_A_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_A_0.woff2') format('woff2'),url('webfonts/3679F1_A_0.woff') format('woff'),url('webfonts/3679F1_A_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-Italic';src: url('./webfonts/3679F1_A_0.eot');src: url('./webfonts/3679F1_A_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_A_0.woff2') format('woff2'),url('./webfonts/3679F1_A_0.woff') format('woff'),url('./webfonts/3679F1_A_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-LightItalic';src: url('webfonts/3679F1_B_0.eot');src: url('webfonts/3679F1_B_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_B_0.woff2') format('woff2'),url('webfonts/3679F1_B_0.woff') format('woff'),url('webfonts/3679F1_B_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-LightItalic';src: url('./webfonts/3679F1_B_0.eot');src: url('./webfonts/3679F1_B_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_B_0.woff2') format('woff2'),url('./webfonts/3679F1_B_0.woff') format('woff'),url('./webfonts/3679F1_B_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-Light';src: url('webfonts/3679F1_C_0.eot');src: url('webfonts/3679F1_C_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_C_0.woff2') format('woff2'),url('webfonts/3679F1_C_0.woff') format('woff'),url('webfonts/3679F1_C_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-Light';src: url('./webfonts/3679F1_C_0.eot');src: url('./webfonts/3679F1_C_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_C_0.woff2') format('woff2'),url('./webfonts/3679F1_C_0.woff') format('woff'),url('./webfonts/3679F1_C_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-MediumItalic';src: url('webfonts/3679F1_D_0.eot');src: url('webfonts/3679F1_D_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_D_0.woff2') format('woff2'),url('webfonts/3679F1_D_0.woff') format('woff'),url('webfonts/3679F1_D_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-MediumItalic';src: url('./webfonts/3679F1_D_0.eot');src: url('./webfonts/3679F1_D_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_D_0.woff2') format('woff2'),url('./webfonts/3679F1_D_0.woff') format('woff'),url('./webfonts/3679F1_D_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-Medium';src: url('webfonts/3679F1_E_0.eot');src: url('webfonts/3679F1_E_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_E_0.woff2') format('woff2'),url('webfonts/3679F1_E_0.woff') format('woff'),url('webfonts/3679F1_E_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-Medium';src: url('./webfonts/3679F1_E_0.eot');src: url('./webfonts/3679F1_E_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_E_0.woff2') format('woff2'),url('./webfonts/3679F1_E_0.woff') format('woff'),url('./webfonts/3679F1_E_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-Regular';src: url('webfonts/3679F1_F_0.eot');src: url('webfonts/3679F1_F_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_F_0.woff2') format('woff2'),url('webfonts/3679F1_F_0.woff') format('woff'),url('webfonts/3679F1_F_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-Regular';src: url('./webfonts/3679F1_F_0.eot');src: url('./webfonts/3679F1_F_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_F_0.woff2') format('woff2'),url('./webfonts/3679F1_F_0.woff') format('woff'),url('./webfonts/3679F1_F_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-ThinItalic';src: url('webfonts/3679F1_10_0.eot');src: url('webfonts/3679F1_10_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_10_0.woff2') format('woff2'),url('webfonts/3679F1_10_0.woff') format('woff'),url('webfonts/3679F1_10_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-ThinItalic';src: url('./webfonts/3679F1_10_0.eot');src: url('./webfonts/3679F1_10_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_10_0.woff2') format('woff2'),url('./webfonts/3679F1_10_0.woff') format('woff'),url('./webfonts/3679F1_10_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'TTNorms-Thin';src: url('webfonts/3679F1_11_0.eot');src: url('webfonts/3679F1_11_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3679F1_11_0.woff2') format('woff2'),url('webfonts/3679F1_11_0.woff') format('woff'),url('webfonts/3679F1_11_0.ttf') format('truetype');}
+@font-face {font-family: 'TTNorms-Thin';src: url('./webfonts/3679F1_11_0.eot');src: url('./webfonts/3679F1_11_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3679F1_11_0.woff2') format('woff2'),url('./webfonts/3679F1_11_0.woff') format('woff'),url('./webfonts/3679F1_11_0.ttf') format('truetype');}
  
